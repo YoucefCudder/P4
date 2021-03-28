@@ -28,7 +28,7 @@ class Player:
     MALE = 0
     FEMALE = 1
 
-    def __init__(self, name, f_name, age, birthdate, sex, ranking):
+    def __init__(self, name, f_name, age, birthdate, gender, ranking, score):
         """
         method to initialize
         """
@@ -36,8 +36,9 @@ class Player:
         self.f_name = f_name
         self.age = age
         self.birthdate = birthdate
-        self.sex = sex
+        self.gender = gender
         self.ranking = ranking
+        self.score = score
 
     def create_player(self):
         """
