@@ -13,6 +13,10 @@ class Tournament:
 # a tournament has a name, a location, a date(it can be on more than 1 day), a number of rounds (4),
 # a list of players,a time controler (bullet, biltz or "coup rapide") and a description
 
+    def __init__(self):
+        """Docstring"""
+        pass
+
 
 class Round:
     """class to define what a round is and what it does"""
@@ -20,13 +24,24 @@ class Round:
 # a round consists to split a list of players according to their ranking in half,
 # the matchmaking goes to 1-5, 2-6, 3-7, 4-8, the matchmaking does a side step if 2 players already
 # played against each others
+    def __init__(self):
+        """Docstring"""
+        pass
 
+    def matchmaking(self):
+        """Docstring"""
+        pass
+    
+    def looping(self):
+        """Docstring"""
+        pass
+    
 
 class Player:
     """class to define what compose the information's player and what a player does"""
 
-    MALE = 0
-    FEMALE = 1
+    MALE = "M"
+    FEMALE = "F"
 
     def __init__(self, name, f_name, age, birthdate, gender, ranking, score):
         """
@@ -38,13 +53,36 @@ class Player:
         self.birthdate = birthdate
         self.gender = gender
         self.ranking = ranking
-        self.score = score
+        self.score = 0
 
-    def create_player(self):
-        """
-        method to create player
-        @return:
-        """
+    def __str__(self):
+        """Doctring."""
+        pass
+
+    def playing(self):
+        """Doctring."""
+        pass
+    
+    def winning(self):
+        """Docstring"""
+
+    def drawing(self):
+        """Docstring"""
+        pass
+
+    def losing(self):
+        """Docstring"""
+        pass
+
+class Players:
+    """class to manage a list of players for a tournament"""
+
+    def __init__(self):
+        """Docstring"""
+        pass
+    
+
+
 
 
 class Ranking:
@@ -52,6 +90,11 @@ class Ranking:
     pass
 # the ranking is essential to make the matchmaking during the rounds
 # the update of the ranking can be made at any time, manually.
+
+    def updating(self):
+        pass
+    
+
 
 
 class Report:
