@@ -97,7 +97,7 @@ serialized_player_1 = {
     
 }
 serialized_player_2 = {
-    'name': player_1.name,
+    'name': player_2.name,
     'f_name' : player_2.f_name, 
     'age': player_2.age,
     'birthdate' : player_2.birthdate,
