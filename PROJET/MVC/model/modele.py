@@ -137,6 +137,8 @@ def __index__(self):
     ranking = serialized_players['ranking']
     score = serialized_players['score']
 
+    return name, f_name, age, birthdate, gender, ranking, score
+    
 db = TinyDB('db.json')
 players_table = db.table('players')
 players_table.truncate()	# clear the table first
