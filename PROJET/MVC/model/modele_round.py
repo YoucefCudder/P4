@@ -18,6 +18,4 @@ class Round:
         """Docstring"""
         pass
 
-    def looping_rounds(self):
-        """Docstring"""
-        pass
+
