@@ -5,6 +5,8 @@ import datetime
 
 
 class Tournaments:
+    """class that defines what contains a tournament 
+    """
 
     def __init__(self):
         pass
