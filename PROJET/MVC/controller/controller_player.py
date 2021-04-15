@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 # coding: utf8
+import sys
+import os
+from tinydb import TinyDB
 
-from ..model.modele_player import Player
-
-
-class AddPlayerController:
-    def __init__(self):
-        pass
-
-    def create_player(self):
-        try:
+sys.path.insert(0, './model')
+from modele_player import Player
 
 
-        except Exception as error:
-            print(f'erreur {error}')
+class AddPlayer:
+    def __init__(self, name, f_name, ranking):
+        self.name = input('name:      ')
+        self.f_name = input('first name:      ')
+        self.ranking = input('ranking:        ')
+        self.player_id = name + f_name + ranking
