@@ -5,6 +5,7 @@ import os
 
 sys.path.insert(0, './PROJET/MVC')
 from modele_tournament import Tournaments
+from datetime import datetime
 
 
 class TournamentControl():
@@ -16,7 +17,7 @@ class TournamentControl():
         self.rounds = input('Rounds:  ')
         self.timing = input('Timing:  ')
         self.description = input('Description: ')
-        self.date = input('Date: ')
+        self.date = datetime.now().strftime('%d-%m-%y %H:%M:%S')
         self.players = input('Players: ')
 
         return {'name': self.name, 'place': self.place, 'start': self.start, 'end': self.end,
