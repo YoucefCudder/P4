@@ -6,8 +6,6 @@ from tinydb import TinyDB
 class Player:
     """class to define what compose the information's player and what a player does"""
 
-
-
     def __init__(self, f_name, name, gender, birthdate, age, score, ranking):
         self.f_name = f_name
         self.name = name
@@ -32,5 +30,12 @@ class Player:
 
         print(f'Le joueur {self.f_name} {self.name} a été créé')
 
+    def updating_score(self, new_score):
+        self.score = new_score
 
 
+    def serialize_player(self):
+        serialized_player = {
+            'name': Player.name,
+            'age': Player.age
+        }

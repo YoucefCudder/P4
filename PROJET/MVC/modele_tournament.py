@@ -8,7 +8,7 @@ class Tournaments:
     """class that defines what contains a tournament 
     """
 
-    def __init__(self, name, place, start, end, rounds, timing, description, date, players):
+    def __init__(self, name, place, start, end, rounds, timing, description, date):
         self.name = name
         self.place = place
         self.start = start
@@ -17,7 +17,6 @@ class Tournaments:
         self.timing = timing
         self.description = description
         self.date = date
-        self.players = players
 
     def create_tournament(self):
         db = TinyDB('db_tournaments.json')
@@ -31,8 +30,12 @@ class Tournaments:
             'rounds': self.rounds,
             'timing': self.timing,
             'description': self.description,
-            'date': self.date,
-            'players': self.players
+            'date': self.date
         })
 
         return f'Le Tournoi {self.name} créé le : {self.date}'
+
+
+class ManageTournament:
+    def processing_tournament(self):
+        pass

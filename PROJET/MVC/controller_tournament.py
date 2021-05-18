@@ -2,13 +2,13 @@
 # coding: utf8
 import sys
 import os
-
-sys.path.insert(0, './PROJET/MVC')
-from modele_tournament import Tournaments
+from PROJET.MVC.modele_tournament import Tournaments
 from datetime import datetime
 
+sys.path.insert(0, './PROJET/MVC')
 
-class TournamentControl():
+
+class TournamentControl:
     def create_tournament(self):
         self.name = input('Name: ')
         self.place = input('Place: ')
@@ -18,15 +18,16 @@ class TournamentControl():
         self.timing = input('Timing:  ')
         self.description = input('Description: ')
         self.date = datetime.now().strftime('%d-%m-%y %H:%M:%S')
-        self.players = input('Players: ')
 
         return {'name': self.name, 'place': self.place, 'start': self.start, 'end': self.end,
-                'rounds': self.rounds,'timing': self.timing, 'description': self.description,
-                'date': self.date, 'players': self.players}
+                'rounds': self.rounds, 'timing': self.timing, 'description': self.description,
+                'date': self.date}
+
+
 
 
 nouveau_tournoi = TournamentControl().create_tournament()
 
 Tournaments(name=nouveau_tournoi['name'], place=nouveau_tournoi['place'], start=nouveau_tournoi['start'],
-                  end=nouveau_tournoi['end'], rounds=nouveau_tournoi['rounds'], timing=nouveau_tournoi['timing'],
-                  description=nouveau_tournoi['description'], date=nouveau_tournoi['date'], players=nouveau_tournoi['players']).create_tournament()
+            end=nouveau_tournoi['end'], rounds=nouveau_tournoi['rounds'], timing=nouveau_tournoi['timing'],
+            description=nouveau_tournoi['description'], date=nouveau_tournoi['date']).create_tournament()
